@@ -1,4 +1,4 @@
-﻿
+
 # Gamini Auto Workshop Management System
 
 ![Version](https://img.shields.io/badge/version-0.1.0-blue)
@@ -107,30 +107,31 @@ flowchart TD
 
 ## Project Structure
 
-```text
 gamini-auto-workshop-manager/
-â”œâ”€â”€ backend/
-â”‚   â”œâ”€â”€ src/
-â”‚   â”‚   â”œâ”€â”€ main/
-â”‚   â”‚   â”‚   â”œâ”€â”€ java/
-â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ controller/
-â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ entity/
-â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ repository/
-â”‚   â”‚   â”‚   â”‚   â””â”€â”€ service/
-â”‚   â”‚   â”‚   â””â”€â”€ resources/
-â”‚   â”‚   â””â”€â”€ test/
-â”‚   â””â”€â”€ pom.xml
-â”œâ”€â”€ frontend/
-â”‚   â”œâ”€â”€ public/
-â”‚   â”œâ”€â”€ src/
-â”‚   â”‚   â”œâ”€â”€ assets/
-â”‚   â”‚   â”œâ”€â”€ components/
-â”‚   â”‚   â”œâ”€â”€ App.jsx
-â”‚   â”‚   â””â”€â”€ App.css
-â”‚   â””â”€â”€ package.json
-â”œâ”€â”€ .gitignore
-â””â”€â”€ README.md
+|-- backend/
+|   |-- src/
+|   |   |-- main/
+|   |   |   |-- java/
+|   |   |   |   `-- com/gaminiauto/workshopmanager/
+|   |   |   |       |-- controller/
+|   |   |   |       |-- entity/
+|   |   |   |       |-- repository/
+|   |   |   |       `-- service/
+|   |   |   `-- resources/
+|   |   `-- test/
+|   `-- pom.xml
+|-- frontend/
+|   |-- public/
+|   |-- src/
+|   |   |-- assets/
+|   |   |-- components/
+|   |   |-- App.jsx
+|   |   `-- App.css
+|   `-- package.json
+|-- .gitignore
+`-- README.md
 ```
+
 
 Java package directories are abbreviated in this diagram.
 
