@@ -107,33 +107,31 @@ flowchart TD
 
 ## Project Structure
 
+```text
 gamini-auto-workshop-manager/
 |-- backend/
 |   |-- src/
 |   |   |-- main/
 |   |   |   |-- java/
-|   |   |   |   `-- com/gaminiauto/workshopmanager/
+|   |   |   |   +-- com/gaminiauto/workshopmanager/
 |   |   |   |       |-- controller/
 |   |   |   |       |-- entity/
 |   |   |   |       |-- repository/
-|   |   |   |       `-- service/
-|   |   |   `-- resources/
-|   |   `-- test/
-|   `-- pom.xml
+|   |   |   |       +-- service/
+|   |   |   +-- resources/
+|   |   +-- test/
+|   +-- pom.xml
 |-- frontend/
 |   |-- public/
 |   |-- src/
 |   |   |-- assets/
 |   |   |-- components/
 |   |   |-- App.jsx
-|   |   `-- App.css
-|   `-- package.json
+|   |   +-- App.css
+|   +-- package.json
 |-- .gitignore
-`-- README.md
++-- README.md
 ```
-
-
-Java package directories are abbreviated in this diagram.
 
 ## Main API Endpoints
 
