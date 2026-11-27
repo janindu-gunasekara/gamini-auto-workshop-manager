@@ -1,0 +1,227 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f3f6fb;
+  color: #172b4d;
+}
+
+.app header {
+  background: #10243a;
+  color: white;
+  padding: 24px 40px;
+  border-bottom: 4px solid #ffc107;
+}
+
+.app header h1 {
+  margin: 0;
+  font-size: 30px;
+  letter-spacing: 2px;
+}
+
+.app header p {
+  margin: 6px 0 0;
+  color: #ffc107;
+}
+
+.app main {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.app main h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.app main > p {
+  color: #64748b;
+}
+
+.app section {
+  background: white;
+  border-radius: 12px;
+  padding: 28px;
+  margin-top: 30px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  border-left: 5px solid #ffc107;
+}
+
+.app section h3 {
+  margin-top: 0;
+}
+
+.app section p {
+  color: #64748b;
+}
+
+/* Customer Records Table */
+
+.app table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.app table thead {
+  background: #10243a;
+  color: white;
+}
+
+.app table th {
+  padding: 16px;
+  text-align: left;
+  font-weight: 600;
+}
+
+.app table td {
+  padding: 15px 16px;
+  border-bottom: 1px solid #e2e8f0;
+  color: #334155;
+}
+
+.app table tbody tr:nth-child(even) {
+  background: #f8fafc;
+}
+
+.app table tbody tr:hover {
+  background: #fff8e1;
+}
+
+.app table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+@media (max-width: 600px) {
+  .app table {
+    font-size: 12px;
+  }
+
+  .app table th,
+  .app table td {
+    padding: 10px;
+  }
+}
+
+/* Customer Action Buttons */
+
+.app .edit-btn,
+.app .delete-btn {
+  border: none;
+  padding: 9px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-right: 8px;
+}
+
+.app .edit-btn {
+  background: #2563eb;
+  color: white;
+}
+
+.app .delete-btn {
+  background: #dc2626;
+  color: white;
+}
+
+.app .edit-btn:hover {
+  background: #1d4ed8;
+}
+
+.app .delete-btn:hover {
+  background: #b91c1c;
+}
+
+/* Customer Search */
+
+.app .search-box {
+  margin: 20px 0;
+}
+
+.app .search-box input {
+  width: 100%;
+  max-width: 420px;
+  padding: 12px 15px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+}
+
+.app .search-box input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* Customer Form Styling */
+
+.app .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.app .form-group label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #334155;
+}
+
+.app .form-group input {
+  width: 100%;
+  padding: 13px 15px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 15px;
+  background: #ffffff;
+  color: #172b4d;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.app .form-group input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.app form button[type="submit"] {
+  background: #ffc107;
+  color: #10243a;
+  padding: 13px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.app form button[type="submit"]:hover {
+  background: #e5ad00;
+}
+
+.app form button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+  .app header {
+    padding: 20px;
+  }
+
+  .app main {
+    margin: 24px auto;
+  }
+
+  .app section {
+    padding: 20px;
+  }
+}

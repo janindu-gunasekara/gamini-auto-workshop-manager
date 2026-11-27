@@ -1,0 +1,522 @@
+
+/* GAMINI AUTO - JOB CARD MANAGEMENT */
+
+.jc-manager {
+  --jc-navy: #14253e;
+  --jc-yellow: #facc15;
+  --jc-border: #dce3ec;
+  --jc-muted: #64748b;
+  --jc-green: #15803d;
+  --jc-red: #dc2626;
+
+  width: 100%;
+  min-width: 0;
+  margin-top: 30px;
+  padding: 24px;
+  background: #f8fafc;
+  border: 1px solid var(--jc-border);
+  border-radius: 14px;
+  color: #1e293b;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.jc-manager * {
+  box-sizing: border-box;
+}
+
+/* SECTION HEADING */
+
+.jc-manager .jc-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+.jc-manager .jc-heading h2 {
+  margin: 0 0 6px;
+  color: var(--jc-navy);
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.jc-manager .jc-heading h3 {
+  margin: 0;
+  color: var(--jc-navy);
+}
+
+.jc-manager .jc-heading p {
+  margin: 0;
+  color: var(--jc-muted);
+  font-size: 14px;
+}
+
+/* DASHBOARD SUMMARY */
+
+.jc-manager .jc-summary {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.jc-manager .jc-stat {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  min-width: 0;
+  padding: 20px;
+  background: #ffffff;
+  border: 1px solid var(--jc-border);
+  border-left: 4px solid var(--jc-navy);
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(15, 23, 42, 0.04);
+}
+
+.jc-manager .jc-stat:nth-child(2) {
+  border-left-color: #eab308;
+}
+
+.jc-manager .jc-stat:nth-child(3) {
+  border-left-color: #16a34a;
+}
+
+.jc-manager .jc-stat:nth-child(4) {
+  border-left-color: #dc2626;
+}
+
+.jc-manager .jc-stat span {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--jc-muted);
+}
+
+.jc-manager .jc-stat strong {
+  font-size: clamp(18px, 2vw, 26px);
+  color: var(--jc-navy);
+  overflow-wrap: anywhere;
+}
+
+/* BUTTONS */
+
+.jc-manager button {
+  width: auto;
+  min-height: 36px;
+  padding: 9px 15px;
+  border: 1px solid transparent;
+  border-radius: 7px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s, opacity 0.2s;
+}
+
+.jc-manager .jc-primary {
+  background: var(--jc-navy);
+  color: #ffffff;
+}
+
+.jc-manager .jc-primary:hover {
+  background: #263e60;
+}
+
+.jc-manager .jc-secondary {
+  background: #ffffff;
+  color: var(--jc-navy);
+  border-color: var(--jc-border);
+}
+
+.jc-manager .jc-secondary:hover {
+  background: #e2e8f0;
+}
+
+.jc-manager .jc-edit {
+  background: var(--jc-yellow);
+  color: #172033;
+}
+
+.jc-manager .jc-edit:hover {
+  background: #eab308;
+}
+
+.jc-manager .jc-danger {
+  background: #fee2e2;
+  color: #b91c1c;
+  border-color: #fecaca;
+}
+
+.jc-manager .jc-danger:hover {
+  background: #fecaca;
+}
+
+.jc-manager button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* SUCCESS AND ERROR MESSAGES */
+
+.jc-manager .jc-error,
+.jc-manager .jc-success {
+  padding: 14px 16px;
+  margin-bottom: 18px;
+  border-radius: 8px;
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+
+.jc-manager .jc-error {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #b91c1c;
+}
+
+.jc-manager .jc-success {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  color: #166534;
+}
+
+/* JOB CARD FORM */
+
+.jc-manager .jc-form {
+  width: 100%;
+  max-width: none;
+  margin: 0 0 24px;
+  padding: 24px;
+  background: #ffffff;
+  border: 1px solid var(--jc-border);
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.05);
+}
+
+.jc-manager .jc-form h3 {
+  margin: 0 0 20px;
+  font-size: 21px;
+  color: var(--jc-navy);
+}
+
+.jc-manager .jc-form h4 {
+  margin: 24px 0 16px;
+  padding: 12px 14px;
+  background: #f1f5f9;
+  border-left: 4px solid var(--jc-yellow);
+  border-radius: 4px;
+  font-size: 15px;
+  color: var(--jc-navy);
+}
+
+.jc-manager .jc-form fieldset {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.jc-manager .jc-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.jc-manager .jc-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  min-width: 0;
+  margin: 0;
+}
+
+.jc-manager .jc-field span {
+  color: #334155;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* FORM INPUTS */
+
+.jc-manager input,
+.jc-manager select,
+.jc-manager textarea {
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  padding: 11px 12px;
+  background: #ffffff;
+  color: #1e293b;
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+  font-family: inherit;
+  font-size: 14px;
+  outline: none;
+}
+
+.jc-manager input:focus,
+.jc-manager select:focus,
+.jc-manager textarea:focus {
+  border-color: #64748b;
+  box-shadow: 0 0 0 3px rgba(20, 37, 62, 0.08);
+}
+
+.jc-manager textarea {
+  min-height: 85px;
+  resize: vertical;
+}
+
+.jc-manager input:disabled,
+.jc-manager select:disabled,
+.jc-manager textarea:disabled {
+  background: #f1f5f9;
+  color: #64748b;
+  cursor: not-allowed;
+}
+
+/* FINANCIAL CALCULATIONS */
+
+.jc-manager .jc-calculations {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 20px;
+  padding: 20px;
+  background: var(--jc-navy);
+  color: #ffffff;
+  border-radius: 10px;
+}
+
+.jc-manager .jc-calculations p {
+  margin: 0;
+  color: #e2e8f0;
+  font-size: 14px;
+}
+
+.jc-manager .jc-calculations strong {
+  color: var(--jc-yellow);
+  font-size: 18px;
+  overflow-wrap: anywhere;
+}
+
+/* SEARCH AND FILTER TOOLBAR */
+
+.jc-manager .jc-toolbar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.jc-manager .jc-toolbar input {
+  flex: 1 1 260px;
+}
+
+.jc-manager .jc-toolbar select {
+  flex: 0 1 210px;
+}
+
+.jc-manager .jc-toolbar button {
+  min-height: 41px;
+}
+
+/* JOB CARD TABLE */
+
+.jc-manager .jc-table-wrapper {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  background: #ffffff;
+  border: 1px solid var(--jc-border);
+  border-radius: 10px;
+}
+
+.jc-manager .jc-table {
+  width: 100%;
+  min-width: 1200px;
+  margin: 0;
+  border-collapse: collapse;
+  font-size: 13px;
+  text-align: left;
+}
+
+.jc-manager .jc-table thead {
+  background: var(--jc-navy);
+  color: #ffffff;
+}
+
+.jc-manager .jc-table th {
+  padding: 15px 12px;
+  background: var(--jc-navy);
+  color: #ffffff;
+  border: none;
+  font-weight: 600;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.jc-manager .jc-table td {
+  padding: 14px 12px;
+  border: none;
+  border-bottom: 1px solid #e2e8f0;
+  vertical-align: middle;
+  color: #334155;
+  text-align: left;
+}
+
+.jc-manager .jc-table tbody tr:nth-child(even) {
+  background: #f8fafc;
+}
+
+.jc-manager .jc-table tbody tr:hover {
+  background: #f1f5f9;
+}
+
+.jc-manager .jc-table td:first-child {
+  color: var(--jc-navy);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.jc-manager .jc-table td:nth-child(6),
+.jc-manager .jc-table td:nth-child(7) {
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+.jc-manager .jc-table select {
+  min-width: 155px;
+  padding: 8px;
+  font-size: 12px;
+}
+
+/* ACTION BUTTON GROUP */
+
+.jc-manager .jc-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.jc-manager .jc-form .jc-actions {
+  margin-top: 24px;
+  padding-top: 18px;
+  border-top: 1px solid var(--jc-border);
+}
+
+.jc-manager .jc-table .jc-actions {
+  min-width: 140px;
+}
+
+.jc-manager .jc-table .jc-actions button {
+  min-height: 30px;
+  padding: 6px 10px;
+  font-size: 12px;
+}
+
+/* JOB CARD DETAIL PANEL */
+
+.jc-manager .jc-detail {
+  margin-top: 24px;
+  padding: 24px;
+  background: #ffffff;
+  border: 1px solid var(--jc-border);
+  border-top: 4px solid var(--jc-navy);
+  border-radius: 12px;
+}
+
+.jc-manager .jc-detail-item {
+  min-width: 0;
+  padding: 14px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 7px;
+}
+
+.jc-manager .jc-detail-item strong {
+  display: block;
+  margin-bottom: 7px;
+  color: var(--jc-muted);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.jc-manager .jc-detail-item p {
+  margin: 0;
+  color: var(--jc-navy);
+  font-size: 14px;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+/* TABLET RESPONSIVE DESIGN */
+
+@media (max-width: 1000px) {
+  .jc-manager .jc-summary {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .jc-manager .jc-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* MOBILE RESPONSIVE DESIGN */
+
+@media (max-width: 600px) {
+  .jc-manager {
+    padding: 12px;
+    margin-top: 20px;
+  }
+
+  .jc-manager .jc-heading {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .jc-manager .jc-heading h2 {
+    font-size: 21px;
+  }
+
+  .jc-manager .jc-summary {
+    gap: 10px;
+  }
+
+  .jc-manager .jc-stat {
+    padding: 14px;
+  }
+
+  .jc-manager .jc-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .jc-manager .jc-form,
+  .jc-manager .jc-detail {
+    padding: 14px;
+  }
+
+  .jc-manager .jc-calculations {
+    grid-template-columns: 1fr;
+  }
+
+  .jc-manager .jc-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .jc-manager .jc-toolbar input,
+  .jc-manager .jc-toolbar select {
+    flex: none;
+    width: 100%;
+  }
+
+  .jc-manager .jc-form .jc-actions button {
+    flex: 1;
+  }
+}
